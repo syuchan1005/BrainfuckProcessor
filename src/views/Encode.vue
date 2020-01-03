@@ -1,7 +1,7 @@
 <template>
   <div class="encode">
     <div>
-      <md-content class="code">
+      <md-content>
         <div>Source Code</div>
         <codemirror v-model="source" @change="debounceParse"/>
       </md-content>
@@ -124,10 +124,6 @@ export default {
   .encode > div {
     width: 100%;
     max-width: 45vw;
-  }
-
-  .code {
-    min-height: 521px;
   }
 
   .table {

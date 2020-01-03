@@ -3,6 +3,7 @@
     <md-content>
       <div>Text</div>
       <codemirror @change="debounceCreate" v-model="text" />
+      <md-checkbox v-model="minify">Minify</md-checkbox>
     </md-content>
 
     <md-button class="runBtn" @click="create">
@@ -25,6 +26,7 @@ export default {
   data() {
     return {
       source: '',
+      minify: true,
     };
   },
   computed: {
@@ -42,7 +44,7 @@ export default {
       this.create();
     }, 500),
     create() {
-      this.source = Brainfuck.create(this.text, this.$store.state.brainfuck);
+      this.source = Brainfuck.create(this.text, this.$store.state.brainfuck, this.minify);
     },
   },
 };

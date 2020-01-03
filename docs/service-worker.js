@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BrainfuckProcessor/precache-manifest.2ca18ea76e6f413ab3000891940323b0.js"
+  "/BrainfuckProcessor/precache-manifest.d831bfb41d7c9beb88341565f6cf72ac.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "brainfuck_processor"});
